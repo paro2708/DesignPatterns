@@ -24,6 +24,7 @@ public class Facade {
 
 		createUser(l.userType, nProductCategory);
 
+		remind();
 	}
 	public Product selectProduct() {
 		return null;
@@ -50,7 +51,9 @@ public class Facade {
 	}
 
 	public void remind() {
-
+		NodeVisitor reminder = new ReminderVisitor();
+		ClassProductList cpl = new ClassProductList();
+		cpl.accept(reminder);
 	}
 
 	public void createUser(int userType, int nProductCategory) throws IOException {
