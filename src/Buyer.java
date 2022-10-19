@@ -1,11 +1,20 @@
+import java.io.IOException;
+
 public class Buyer extends Person {
 	private ProductMenu theProductMenu;
-	public void showMenu() {
-		System.out.println("Bridge pattern.\n" +
-				"Created a Buyer");
-		System.out.println("Showing the Produce Product Menu\n" +
-				"1. Tomato\n" +
-				"2. Onion\n");
+	int category;
+
+	Buyer(int productCategory) throws IOException {
+		category = productCategory;
+	}
+	public void showMenu() throws IOException {
+		if(category == 0) {
+			MeatProductMenu menu = new MeatProductMenu();
+			menu.showMenu();
+		} else if (category == 1) {
+			ProduceProductMenu menu = new ProduceProductMenu();
+			menu.showMenu();
+		}
 	}
 
 	public ProductMenu CreateProductMenu() {

@@ -15,8 +15,6 @@ public class Facade {
 		Login l = new Login();
 		UserType = l.login();
 
-		createUser(UserType);
-
 		System.out.println("Select product category\n" +
 				"0 for Meat Product Menu\n" +
 				"1 for Produce Product Menu");
@@ -24,21 +22,8 @@ public class Facade {
 		Scanner sc = new Scanner(System.in);
 		nProductCategory = sc.nextInt();
 
-		switch(nProductCategory) {
-			case 0:
-				System.out.println("You have selected the Meat menu.");
-				ProductMenu mpm = new MeatProductMenu();
-				mpm.showMenu();
-				break;
-			case 1:
-				System.out.println("You have selected the Produce menu.");
-				ProductMenu ppm = new ProduceProductMenu();
-				ppm.showMenu();
-				break;
-			default:
-				System.out.println("Wrong menu selected");
-				break;
-		}
+		createUser(l.userType, nProductCategory);
+
 	}
 	public Product selectProduct() {
 		return null;
@@ -68,11 +53,13 @@ public class Facade {
 
 	}
 
-	public void createUser(int userType) {
+	public void createUser(int userType, int nProductCategory) throws IOException {
 		if(userType == 0) {
-			Person p = new Seller();
+			Person p = new Seller(nProductCategory);
+			p.showMenu();
 		} else if(userType == 1) {
-			Person p = new Buyer();
+			Person p = new Buyer(nProductCategory);
+			p.showMenu();
 		}
 	}
 

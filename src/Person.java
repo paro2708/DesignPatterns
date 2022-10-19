@@ -1,9 +1,11 @@
+import java.io.IOException;
+
 public abstract class Person {
 	private ProductMenu theProductMenu;
 
 	private ProductMenu productMenu;
 
-	public abstract void showMenu();
+	public abstract void showMenu() throws IOException;
 
 	public void showAddButton() {
 

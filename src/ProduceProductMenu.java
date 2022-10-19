@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class ProduceProductMenu implements ProductMenu {
@@ -27,7 +25,7 @@ public class ProduceProductMenu implements ProductMenu {
 		for(String s : produceItems) {
 			System.out.println(s);
 		}
-	}
+    }
 
 	public void showAddButton() {
 		System.out.println("Adding buttons in Produce Product Menu");
