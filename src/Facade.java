@@ -17,15 +17,15 @@ public class Facade {
 	private ProductMenu theProductMenu;
 
 	public void initiateFacade() throws IOException {
-		System.out.println("Facade pattern\n");
-
+		System.out.println(">>>>>>>>>>Facade pattern<<<<<<<<<<");
 		Login l = new Login();
 		UserType = l.login();
 
+		System.out.println(">>>>>>>>>>Iterator pattern<<<<<<<<<<");
 		ClassProductList productList = new ClassProductList();
 		createProductList(productList);
 
-		System.out.println("Displaying the product list using the iterator pattern\n");
+		System.out.println("Displaying the product list:");
 
 		ProductIterator iterator = new ProductIterator(theProductList);
 		iterator.createIterator();
@@ -43,6 +43,7 @@ public class Facade {
 
 		createUser(l.userType, nProductCategory);
 
+		System.out.println(">>>>>>>>>>Visitor pattern<<<<<<<<<<");
 		remind();
 	}
 	public Product selectProduct() {
@@ -76,6 +77,7 @@ public class Facade {
 	}
 
 	public void createUser(int userType, int nProductCategory) throws IOException {
+		System.out.println(">>>>>>>>>>Factory pattern<<<<<<<<<<");
 		if(userType == 0) {
 			Person p = new Seller(nProductCategory);
 			p.showMenu();

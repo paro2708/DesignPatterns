@@ -8,6 +8,7 @@ public class Seller extends Person {
 		category = productCategory;
 	}
 	public void showMenu() throws IOException {
+		System.out.println(">>>>>>>>>>Bridge pattern<<<<<<<<<<");
 		if(category == 0) {
 			MeatProductMenu menu = new MeatProductMenu();
 			menu.showMenu();
