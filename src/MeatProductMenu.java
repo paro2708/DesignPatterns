@@ -22,7 +22,7 @@ public class MeatProductMenu implements ProductMenu {
 			}
 		}
 
-		System.out.println("The items in the Produce menu are:");
+		System.out.println("The items in the Meat menu are:");
 		for(String s : produceItems) {
 			System.out.println(s);
 		}

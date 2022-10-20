@@ -17,7 +17,7 @@ public class Facade {
 	private ProductMenu theProductMenu;
 
 	public void initiateFacade() throws IOException {
-		System.out.println("Facade pattern");
+		System.out.println("Facade pattern\n");
 
 		Login l = new Login();
 		UserType = l.login();
@@ -25,17 +25,18 @@ public class Facade {
 		ClassProductList productList = new ClassProductList();
 		createProductList(productList);
 
-		System.out.println("Displaying the product list using the iterator pattern");
+		System.out.println("Displaying the product list using the iterator pattern\n");
 
 		ProductIterator iterator = new ProductIterator(theProductList);
 		iterator.createIterator();
 		while(iterator.HasNext()) {
 			System.out.println(iterator.Next());
 		}
+		System.out.println();
 
 		System.out.println("Select product category\n" +
 				"0 for Meat Product Menu\n" +
-				"1 for Produce Product Menu");
+				"1 for Produce Product Menu\n");
 
 		Scanner sc = new Scanner(System.in);
 		nProductCategory = sc.nextInt();

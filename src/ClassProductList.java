@@ -8,7 +8,6 @@ public class ClassProductList {
 
 	public Reminder accept(NodeVisitor visitor) {
 		System.out.println("Class product list reminder");
-//		return visitor.visitProduct(product.get(0));
 		return null;
 	}
 

@@ -7,7 +7,6 @@ public class ProductIterator {
 	ArrayList<String> productList = new ArrayList<>();
 	int idx = 0;
 	ProductIterator(ArrayList<String> theProductList) {
-		System.out.println(theProductList);
 		productList = new ArrayList<>();
 		for(int i=0; i<theProductList.size(); i++) {
 			productList.add(theProductList.get(i));

@@ -14,13 +14,13 @@ public class Login {
         System.out.println("Enter Password");
         password = sc.next();
         if(validateBuyer(username, password) == 0) {
-            System.out.println("Hello buyer!");
+            System.out.println("Hello buyer!\n");
             userType = 0;
         } else if (validateSeller(username, password) == 1) {
-            System.out.println("Hello seller!");
+            System.out.println("Hello seller!\n");
             userType = 1;
         } else {
-            System.out.println("Invalid credentials");
+            System.out.println("Invalid credentials\n");
             System.exit(-1);
         }
         return userType;
