@@ -1,13 +1,11 @@
 public class OfferingIterator {
 
-	private OfferingList offeringList;
-
-	public boolean hasNext() {
-		return false;
+	public String Next() {
+		return null;
 	}
 
-	public Offering Next() {
-		return null;
+	public boolean HasNext() {
+		return false;
 	}
 
 	public void MoveToHead() {
