@@ -1,7 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.ListIterator;
-
 public class ProductIterator {
 
 	ArrayList<String> productList = new ArrayList<>();

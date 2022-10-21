@@ -27,7 +27,7 @@ public class Login {
     }
 
     public int validateBuyer(String username, String password) throws IOException {
-        BufferedReader bufReader = new BufferedReader(new FileReader("C:\\Users\\Paromita Roy\\Documents\\Fall22\\SER515\\Assignments\\DP\\DP\\src\\BuyerInfo.txt"));
+        BufferedReader bufReader = new BufferedReader(new FileReader("BuyerInfo.txt"));
         ArrayList<String> listOfLines = new ArrayList<>();
         String line = bufReader.readLine();
         while (line != null) {
@@ -48,7 +48,7 @@ public class Login {
     }
 
     public int validateSeller(String username, String password) throws IOException {
-        BufferedReader bufReader = new BufferedReader(new FileReader("C:\\Users\\Paromita Roy\\Documents\\Fall22\\SER515\\Assignments\\DP\\DP\\src\\SellerInfo.txt"));
+        BufferedReader bufReader = new BufferedReader(new FileReader("SellerInfo.txt"));
         ArrayList<String> listOfLines = new ArrayList<>();
         String line = bufReader.readLine();
         while (line != null) {

@@ -88,7 +88,7 @@ public class Facade {
 	}
 
 	public void createProductList(ClassProductList productList) throws IOException {
-		BufferedReader bufReader = new BufferedReader(new FileReader("C:\\Users\\Paromita Roy\\Documents\\Fall22\\SER515\\Assignments\\DP\\DP\\src\\ProductInfo.txt"));
+		BufferedReader bufReader = new BufferedReader(new FileReader("ProductInfo.txt"));
 		ArrayList<String> listOfLines = new ArrayList<>();
 		String line = bufReader.readLine();
 		while (line != null) {
